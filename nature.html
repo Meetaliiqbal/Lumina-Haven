@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Nature &amp; Outdoors — Lumina Haven</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fafbf8;
+  --surface:#ffffff;
+  --ink:#20231e;
+  --subtle:#62685e;
+  --accent:#536b4b;
+  --line:#dfe4dc;
+  --soft:#f0f3ed;
+  --max-width:1040px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.75;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+
+  background:rgba(250,251,248,.96);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1180px;
+  height:72px;
+
+  margin:0 auto;
+  padding:0 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.4px;
+
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:21px;
+
+  font-size:12.5px;
+  font-weight:500;
+}
+
+.header-nav a{
+  color:var(--subtle);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  padding:9px 16px;
+  border-radius:6px;
+
+  background:var(--ink);
+  color:#fff;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:72px 24px 48px;
+
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+
+  margin-bottom:18px;
+  padding:6px 14px;
+
+  border:1px solid #d5ddd0;
+  border-radius:4px;
+
+  background:#eef2eb;
+  color:var(--accent);
+
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+}
+
+.page-intro h1{
+  max-width:760px;
+
+  margin:0 auto 17px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(38px,5.5vw,54px);
+  line-height:1.08;
+  font-weight:600;
+  letter-spacing:-.3px;
+}
+
+.page-intro p{
+  max-width:670px;
+
+  margin:0 auto;
+
+  color:var(--subtle);
+
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+
+/* =========================
+   ARTICLE AREA
+========================= */
+
+.article-area{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:0 24px 85px;
+}
+
+.article-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+
+  padding-bottom:14px;
+  margin-bottom:22px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.article-heading h2{
+  margin:0;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:28px;
+  font-weight:600;
+}
+
+.article-heading span{
+  color:#858d80;
+
+  font-size:11px;
+  font-weight:500;
+}
+
+
+/* =========================
+   ARTICLE GRID
+========================= */
+
+.article-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+}
+
+.article-card{
+  position:relative;
+
+  min-height:275px;
+
+  padding:24px 22px 21px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  background:var(--surface);
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.article-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:22px;
+  right:22px;
+
+  height:2px;
+
+  background:var(--accent);
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  transition:transform .22s ease;
+}
+
+.article-card:hover{
+  transform:translateY(-4px);
+
+  border-color:#cdd5c8;
+
+  box-shadow:0 12px 28px rgba(35,48,31,.06);
+}
+
+.article-card:hover::before{
+  transform:scaleX(1);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.article-category{
+  margin-bottom:14px;
+
+  color:var(--accent);
+
+  font-size:9.5px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.article-card h3{
+  margin:0 0 10px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:600;
+}
+
+.article-card p{
+  margin:0;
+
+  color:var(--subtle);
+
+  font-size:12.5px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.article-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:24px;
+  padding-top:15px;
+
+  border-top:1px solid #e9ede6;
+}
+
+.read-time{
+  color:#8a9185;
+
+  font-size:10.5px;
+  font-weight:400;
+}
+
+.read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+
+  color:var(--ink);
+
+  font-size:11.5px;
+  font-weight:600;
+
+  transition:color .2s ease;
+}
+
+.read-more span{
+  transition:transform .2s ease;
+}
+
+.article-card:hover .read-more{
+  color:var(--accent);
+}
+
+.article-card:hover .read-more span{
+  transform:translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+
+  padding:52px 24px;
+
+  border-top:1px solid var(--line);
+
+  background:var(--soft);
+
+  text-align:center;
+
+  color:var(--subtle);
+
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+
+  gap:22px;
+
+  margin-bottom:18px;
+
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:700px;
+
+  margin:15px auto 0;
+
+  color:#858c81;
+
+  font-size:10.5px;
+  line-height:1.65;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+  .article-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .header-nav{
+    gap:14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:620px){
+
+  .header-inner{
+    height:66px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .page-intro{
+    padding:48px 18px 34px;
+  }
+
+  .page-intro h1{
+    font-size:39px;
+  }
+
+  .page-intro p{
+    font-size:13.5px;
+  }
+
+  .article-area{
+    padding:0 16px 60px;
+  }
+
+  .article-heading{
+    align-items:center;
+  }
+
+  .article-heading h2{
+    font-size:25px;
+  }
+
+  .article-grid{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+
+  .article-card{
+    min-height:230px;
+    padding:23px 20px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SHARED HEADER -->
+
+<script src="header.js" defer></script>
+
+
+<!-- =========================
+     PAGE INTRO
+========================= -->
+
+<section class="page-intro">
+
+  <span class="eyebrow">
+    Nature Journal
+  </span>
+
+  <h1>
+    A Little More Time Outdoors
+  </h1>
+
+  <p>
+    Explore outdoor inspiration, peaceful landscapes,
+    seasonal changes and simple ways to reconnect with
+    the natural world around you.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     ARTICLE COLLECTION
+========================= -->
+
+<main class="article-area">
+
+  <div class="article-heading">
+
+    <h2>
+      Nature &amp; Outdoors
+    </h2>
+
+    <span>
+      12 Articles
+    </span>
+
+  </div>
+
+
+  <div class="article-grid">
+
+
+    <!-- ARTICLE 01 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Outdoor Ideas
+        </div>
+
+        <h3>
+          Simple Ways to Spend More Time Outside
+        </h3>
+
+        <p>
+          Small changes to an ordinary day can create more
+          opportunities for fresh air, sunlight and quiet
+          moments outdoors.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-more-time-outdoors.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 02 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Forests
+        </div>
+
+        <h3>
+          Why a Walk Through the Woods Feels So Different
+        </h3>
+
+        <p>
+          Explore the atmosphere of wooded landscapes and
+          the simple pleasures that make forest walks such
+          memorable outdoor experiences.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-forest-walks.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 03 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Gardens
+        </div>
+
+        <h3>
+          Creating a Small Outdoor Garden Space
+        </h3>
+
+        <p>
+          Even a balcony, patio or small corner can become
+          an inviting place for plants, natural textures and
+          quiet outdoor moments.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-small-garden-space.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 04 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Seasons
+        </div>
+
+        <h3>
+          Noticing the Small Changes Each Season Brings
+        </h3>
+
+        <p>
+          From changing leaves to longer evenings, seasonal
+          details can make familiar outdoor spaces feel
+          completely different throughout the year.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="nature-changing-seasons.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 05 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Hiking
+        </div>
+
+        <h3>
+          Making a Day Hike More Enjoyable
+        </h3>
+
+        <p>
+          A few practical preparations can make a simple
+          trail walk more comfortable, relaxed and enjoyable
+          from beginning to end.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-enjoyable-day-hike.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 06 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Wildlife
+        </div>
+
+        <h3>
+          Quiet Ways to Notice Wildlife Around You
+        </h3>
+
+        <p>
+          Patience, observation and a little curiosity can
+          reveal birds, insects and other wildlife that often
+          go unnoticed during everyday walks.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-noticing-wildlife.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 07 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Lakes &amp; Water
+        </div>
+
+        <h3>
+          The Simple Appeal of Spending Time Near Water
+        </h3>
+
+        <p>
+          Lakes, rivers and quiet shorelines offer a
+          different kind of outdoor setting for walks,
+          photography and slow afternoons.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="nature-time-near-water.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 08 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Outdoor Photography
+        </div>
+
+        <h3>
+          Finding Interesting Nature Photos Close to Home
+        </h3>
+
+        <p>
+          You do not always need a dramatic destination to
+          find beautiful scenes. Light, texture and timing
+          can transform familiar places.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-photography-close-to-home.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 09 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Plants
+        </div>
+
+        <h3>
+          Easy Ways to Bring More Natural Greenery Into Daily Life
+        </h3>
+
+        <p>
+          Explore simple ideas for appreciating plants and
+          natural greenery both outdoors and in the spaces
+          where you spend your day.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="nature-everyday-greenery.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 10 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Stargazing
+        </div>
+
+        <h3>
+          Getting Started With Simple Stargazing
+        </h3>
+
+        <p>
+          A beginner-friendly look at choosing a darker
+          location, watching the sky and making an evening
+          outdoors feel more memorable.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="nature-simple-stargazing.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 11 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Picnics
+        </div>
+
+        <h3>
+          Planning a Relaxed Picnic Outdoors
+        </h3>
+
+        <p>
+          Simple food, comfortable seating and a pleasant
+          location can turn an ordinary afternoon into an
+          enjoyable outdoor escape.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="nature-relaxed-picnic.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 12 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Slow Outdoors
+        </div>
+
+        <h3>
+          The Joy of Exploring Somewhere Without a Schedule
+        </h3>
+
+        <p>
+          Sometimes the best outdoor experiences come from
+          leaving the timetable behind and simply following
+          the landscape wherever it leads.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          6 min read
+        </span>
+
+        <a
+          href="nature-unscheduled-exploration.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</main>
+
+
+<!-- SHARED FOOTER -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Why a Walk Through the Woods Feels So Different — Lumina Haven</title>
+
+<meta name="description" content="Explore the simple appeal of forest walks, from changing light and natural textures to the quiet atmosphere of wooded landscapes.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --bg:#fcfcfb;
+  --card:#ffffff;
+  --text:#1c1b18;
+  --muted:#5c5a53;
+  --accent:#536b4b;
+  --border:#e2e5df;
+  --soft:#f3f5f0;
+  --max:900px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+
+  background:var(--bg);
+  color:var(--text);
+
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================
+   ARTICLE HERO
+========================================= */
+
+.article-hero{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:68px 24px 42px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-block;
+
+  margin-bottom:17px;
+  padding:6px 16px;
+
+  background:#eef2eb;
+  border:1px solid #d5ddd0;
+  border-radius:20px;
+
+  color:var(--accent);
+
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-hero h1{
+  max-width:760px;
+
+  margin:0 auto 18px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(38px,6vw,56px);
+  line-height:1.1;
+  font-weight:600;
+
+  color:var(--text);
+}
+
+.article-hero .intro{
+  max-width:670px;
+
+  margin:0 auto;
+
+  color:var(--muted);
+
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+.article-meta{
+  margin-top:20px;
+
+  color:#858c81;
+
+  font-size:11px;
+  font-weight:400;
+}
+
+
+/* =========================================
+   ARTICLE CONTAINER
+========================================= */
+
+.article-wrapper{
+  width:100%;
+  max-width:var(--max);
+
+  margin:0 auto;
+
+  padding:0 24px 75px;
+}
+
+.article-content{
+  background:var(--card);
+
+  border:1px solid var(--border);
+  border-radius:14px;
+
+  padding:46px 52px;
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.018);
+}
+
+
+/* Back link */
+
+.back-link{
+  display:inline-flex;
+  align-items:center;
+
+  margin-bottom:28px;
+
+  color:var(--accent);
+
+  font-size:12px;
+  font-weight:500;
+
+  transition:opacity .2s ease;
+}
+
+.back-link:hover{
+  opacity:.7;
+}
+
+
+/* Headings */
+
+.article-content h2{
+  margin:35px 0 12px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+
+  color:var(--text);
+}
+
+.article-content h2:first-of-type{
+  margin-top:0;
+}
+
+
+/* Paragraphs */
+
+.article-content p{
+  margin:0 0 18px;
+
+  color:#50564d;
+
+  font-size:14px;
+  line-height:1.85;
+  font-weight:300;
+}
+
+
+/* =========================================
+   ARTICLE NOTE
+========================================= */
+
+.article-note{
+  margin:28px 0;
+
+  padding:20px 22px;
+
+  background:#f3f5f0;
+
+  border-left:3px solid var(--accent);
+  border-radius:5px;
+}
+
+.article-note p{
+  margin:0;
+}
+
+.article-note strong{
+  color:var(--text);
+  font-weight:600;
+}
+
+
+/* =========================================
+   CTA / RESOURCE CARD
+========================================= */
+
+.resource-card{
+  margin:42px 0 36px;
+
+  padding:36px 30px;
+
+  text-align:center;
+
+  background:linear-gradient(
+    135deg,
+    #f5f6f1,
+    #e9eee5
+  );
+
+  border:1px solid #d5ddcf;
+  border-radius:14px;
+}
+
+.resource-card .small-label{
+  margin-bottom:10px;
+
+  color:var(--accent);
+
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.resource-card h2{
+  margin:0 0 11px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.resource-card p{
+  max-width:570px;
+
+  margin:0 auto 22px;
+
+  color:var(--muted);
+
+  font-size:13px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.resource-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:46px;
+
+  padding:13px 28px;
+
+  background:var(--accent);
+  color:#ffffff;
+
+  border-radius:7px;
+
+  font-size:12.5px;
+  font-weight:600;
+
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.resource-btn:hover{
+  background:#40563a;
+  transform:translateY(-2px);
+}
+
+.resource-disclosure{
+  margin-top:13px !important;
+  margin-bottom:0 !important;
+
+  color:#858c81 !important;
+
+  font-size:10px !important;
+  line-height:1.55 !important;
+}
+
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:700px){
+
+  .article-hero{
+    padding:48px 18px 34px;
+  }
+
+  .article-hero h1{
+    font-size:40px;
+  }
+
+  .article-hero .intro{
+    font-size:13.5px;
+  }
+
+  .article-wrapper{
+    padding:0 15px 55px;
+  }
+
+  .article-content{
+    padding:30px 21px;
+    border-radius:12px;
+  }
+
+  .article-content h2{
+    font-size:27px;
+  }
+
+  .article-content p{
+    font-size:13.5px;
+  }
+
+  .resource-card{
+    padding:30px 20px;
+  }
+
+  .resource-card h2{
+    font-size:27px;
+  }
+
+  .site-footer{
+    padding:42px 18px;
+  }
+
+  .footer-links{
+    gap:14px 20px;
+  }
+}
+
+
+@media(max-width:380px){
+
+  .article-hero h1{
+    font-size:35px;
+  }
+
+  .article-content{
+    padding:27px 17px;
+  }
+
+  .resource-btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     SHARED HEADER
+========================================= -->
+
+<script src="header.js" defer></script>
+
+
+
+<!-- =========================================
+     ARTICLE HERO
+========================================= -->
+
+<section class="article-hero">
+
+  <span class="article-category">
+    Forests
+  </span>
+
+  <h1>
+    Why a Walk Through the Woods Feels So Different
+  </h1>
+
+  <p class="intro">
+    Forests have a way of changing the character of an
+    ordinary walk. The light becomes softer, sounds feel
+    different and even familiar paths can seem surprisingly
+    new.
+  </p>
+
+  <div class="article-meta">
+    5 min read · Nature Journal
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ARTICLE
+========================================= -->
+
+<main class="article-wrapper">
+
+  <article class="article-content">
+
+
+    <a href="nature.html" class="back-link">
+      ← Back to Nature Journal
+    </a>
+
+
+    <h2>
+      A Different Kind of Landscape
+    </h2>
+
+    <p>
+      Walking through a wooded area can feel noticeably
+      different from walking along a busy street. Instead of
+      buildings and traffic dominating the view, attention is
+      naturally drawn toward trees, changing light, leaves,
+      paths and the landscape ahead.
+    </p>
+
+    <p>
+      The environment also changes constantly. A few steps
+      can take you from an open section into shade, across
+      a patch of sunlight or beside a completely different
+      collection of plants.
+    </p>
+
+
+    <h2>
+      Pay Attention to the Sounds
+    </h2>
+
+    <p>
+      One of the easiest ways to appreciate a forest walk is
+      simply to listen. Leaves moving in the wind, footsteps
+      on different surfaces, distant birds and flowing water
+      can become part of the experience.
+    </p>
+
+    <p>
+      You do not need special equipment to notice these
+      details. Walking without constantly checking a phone
+      gives your attention more room to explore the sounds
+      around you.
+    </p>
+
+
+    <div class="article-note">
+
+      <p>
+        <strong>Try this:</strong>
+        During part of your next walk, put your phone away
+        and concentrate only on what you can hear, see and
+        feel around you.
+      </p>
+
+    </div>
+
+
+    <h2>
+      Look Closely at the Details
+    </h2>
+
+    <p>
+      Forest landscapes are made up of hundreds of small
+      details. Bark patterns, moss, fallen leaves, small
+      flowers, interesting stones and different shades of
+      green can all become interesting when you slow down.
+    </p>
+
+    <p>
+      Photography can be a fun way to encourage this kind
+      of observation. Rather than trying to photograph the
+      entire landscape, look for one small detail that
+      catches your attention.
+    </p>
+
+
+    <h2>
+      Let the Light Change the Experience
+    </h2>
+
+    <p>
+      Natural light can completely alter the appearance of a
+      wooded path. Morning light may create long shadows,
+      while later in the day sunlight can appear between the
+      branches in smaller patches.
+    </p>
+
+    <p>
+      Even cloudy weather can create an interesting
+      atmosphere. Softer light often brings out textures and
+      subtle variations that are harder to notice under
+      stronger sunlight.
+    </p>
+<!-- =====================================
+         CTA
+    ====================================== -->
+
+    <div class="resource-card">
+
+      <div class="small-label">
+        Explore More
+      </div>
+
+      <h2>
+        Discover More Outdoor Ideas
+      </h2>
+
+      <p>
+        If you enjoy exploring new ideas, take a look at
+        another collection of lifestyle and outdoor
+        resources available through our external partner.
+      </p>
+
+      <!-- Change this to your CPA/offer page -->
+      <a
+        href="nature-offer.html"
+        class="resource-btn"
+      >
+        Explore Available Options →
+      </a>
+
+      <p class="resource-disclosure">
+        This page may contain links to external services or
+        promotional offers. Availability and terms may vary.
+      </p>
+
+    </div>
+
+    <h2>
+      Take Your Time
+    </h2>
+
+    <p>
+      A forest walk does not have to be a race from one point
+      to another. Leaving some extra time allows you to stop
+      occasionally, look around or take a different path.
+    </p>
+
+    <p>
+      This slower approach can also make a familiar trail
+      feel less repetitive. Instead of focusing only on the
+      destination, the walk itself becomes part of the
+      experience.
+    </p>
+
+
+    <h2>
+      Keep Exploration Simple
+    </h2>
+
+    <p>
+      You do not need an elaborate outdoor setup to enjoy
+      wooded landscapes. Comfortable clothing, suitable
+      footwear, water and a little awareness of the local
+      conditions are often enough for an ordinary walk.
+    </p>
+
+    <p>
+      If you are exploring an unfamiliar area, stay on
+      appropriate trails and follow local guidance. Respect
+      wildlife, avoid disturbing plants and leave the area
+      as you found it.
+    </p>
+
+
+    <h2>
+      Find Your Own Favorite Route
+    </h2>
+
+    <p>
+      The best forest walk is not necessarily the longest or
+      most famous one. A nearby trail that you genuinely
+      enjoy may become more valuable simply because it is
+      easy to return to.
+    </p>
+
+    <p>
+      Over time, you may begin to notice how the same place
+      changes with weather and seasons. That familiarity can
+      make returning feel less like repeating a walk and more
+      like checking in on a landscape you know.
+    </p>
+
+
+    
+
+
+  </article>
+
+</main>
+
+
+
+<!-- =========================================
+     SHARED FOOTER
+========================================= -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

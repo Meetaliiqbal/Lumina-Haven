@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Travel &amp; Places — Lumina Haven</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fbfaf8;
+  --surface:#ffffff;
+  --ink:#24211d;
+  --subtle:#68635b;
+  --accent:#765638;
+  --line:#e5e0d8;
+  --soft:#f4f1eb;
+  --max-width:1040px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.75;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+
+  background:rgba(251,250,248,.96);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1180px;
+  height:72px;
+
+  margin:0 auto;
+  padding:0 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.4px;
+
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:21px;
+
+  font-size:12.5px;
+  font-weight:500;
+}
+
+.header-nav a{
+  color:var(--subtle);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  padding:9px 16px;
+  border-radius:6px;
+
+  background:var(--ink);
+  color:#fff;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:72px 24px 48px;
+
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+
+  margin-bottom:18px;
+  padding:6px 14px;
+
+  border:1px solid #ddd5ca;
+  border-radius:4px;
+
+  background:#f5f0e9;
+  color:var(--accent);
+
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+}
+
+.page-intro h1{
+  max-width:760px;
+
+  margin:0 auto 17px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(38px,5.5vw,54px);
+  line-height:1.08;
+  font-weight:600;
+  letter-spacing:-.3px;
+}
+
+.page-intro p{
+  max-width:650px;
+
+  margin:0 auto;
+
+  color:var(--subtle);
+
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+
+/* =========================
+   ARTICLE AREA
+========================= */
+
+.article-area{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:0 24px 85px;
+}
+
+.article-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+
+  padding-bottom:14px;
+  margin-bottom:22px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.article-heading h2{
+  margin:0;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:28px;
+  font-weight:600;
+}
+
+.article-heading span{
+  color:#89847c;
+
+  font-size:11px;
+  font-weight:500;
+}
+
+
+/* =========================
+   ARTICLE GRID
+========================= */
+
+.article-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+}
+
+.article-card{
+  position:relative;
+
+  min-height:275px;
+
+  padding:24px 22px 21px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  background:var(--surface);
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.article-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:22px;
+  right:22px;
+
+  height:2px;
+
+  background:var(--accent);
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  transition:transform .22s ease;
+}
+
+.article-card:hover{
+  transform:translateY(-4px);
+
+  border-color:#d7cfc4;
+
+  box-shadow:0 12px 28px rgba(44,36,28,.06);
+}
+
+.article-card:hover::before{
+  transform:scaleX(1);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.article-category{
+  margin-bottom:14px;
+
+  color:var(--accent);
+
+  font-size:9.5px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.article-card h3{
+  margin:0 0 10px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:600;
+}
+
+.article-card p{
+  margin:0;
+
+  color:var(--subtle);
+
+  font-size:12.5px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.article-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:24px;
+  padding-top:15px;
+
+  border-top:1px solid #eeeae4;
+}
+
+.read-time{
+  color:#918c84;
+
+  font-size:10.5px;
+  font-weight:400;
+}
+
+.read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+
+  color:var(--ink);
+
+  font-size:11.5px;
+  font-weight:600;
+
+  transition:color .2s ease;
+}
+
+.read-more span{
+  transition:transform .2s ease;
+}
+
+.article-card:hover .read-more{
+  color:var(--accent);
+}
+
+.article-card:hover .read-more span{
+  transform:translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+
+  padding:52px 24px;
+
+  border-top:1px solid var(--line);
+
+  background:var(--soft);
+
+  text-align:center;
+
+  color:var(--subtle);
+
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+
+  gap:22px;
+
+  margin-bottom:18px;
+
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:700px;
+
+  margin:15px auto 0;
+
+  color:#8a857d;
+
+  font-size:10.5px;
+  line-height:1.65;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+  .article-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .header-nav{
+    gap:14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:620px){
+
+  .header-inner{
+    height:66px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .page-intro{
+    padding:48px 18px 34px;
+  }
+
+  .page-intro h1{
+    font-size:39px;
+  }
+
+  .page-intro p{
+    font-size:13.5px;
+  }
+
+  .article-area{
+    padding:0 16px 60px;
+  }
+
+  .article-heading{
+    align-items:center;
+  }
+
+  .article-heading h2{
+    font-size:25px;
+  }
+
+  .article-grid{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+
+  .article-card{
+    min-height:230px;
+    padding:23px 20px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SHARED HEADER -->
+
+<script src="header.js" defer></script>
+
+
+<!-- =========================
+     PAGE INTRO
+========================= -->
+
+<section class="page-intro">
+
+  <span class="eyebrow">
+    Travel Journal
+  </span>
+
+  <h1>
+    Places Worth Slowing Down For
+  </h1>
+
+  <p>
+    Discover thoughtful travel ideas, practical planning
+    tips and inspiring ways to experience new places
+    without turning every trip into a rushed itinerary.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     ARTICLE COLLECTION
+========================= -->
+
+<main class="article-area">
+
+  <div class="article-heading">
+
+    <h2>
+      Travel &amp; Places
+    </h2>
+
+    <span>
+      12 Articles
+    </span>
+
+  </div>
+
+
+  <div class="article-grid">
+
+
+    <!-- ARTICLE 01 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Trip Planning
+        </div>
+
+        <h3>
+          How to Plan a Trip Without Filling Every Hour
+        </h3>
+
+        <p>
+          A more flexible approach to travel planning that
+          leaves room for wandering, unexpected discoveries
+          and unplanned moments.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-flexible-itinerary.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 02 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Packing
+        </div>
+
+        <h3>
+          A Smarter Way to Pack for a Short Getaway
+        </h3>
+
+        <p>
+          Simple packing principles for creating useful
+          combinations while keeping your luggage lighter
+          and easier to manage.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-smart-packing.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 03 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          City Breaks
+        </div>
+
+        <h3>
+          Making the Most of a Weekend in a New City
+        </h3>
+
+        <p>
+          How to balance well-known sights with quieter
+          neighborhoods, local cafés and time simply
+          exploring on foot.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-weekend-city-guide.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 04 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Nature Escapes
+        </div>
+
+        <h3>
+          Ideas for a Quiet Escape Into Nature
+        </h3>
+
+        <p>
+          From forest walks to lakeside mornings, explore
+          simple ways to build a peaceful outdoor break
+          into your next trip.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="travel-nature-escape.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 05 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Road Trips
+        </div>
+
+        <h3>
+          What Makes a Road Trip Feel Effortless
+        </h3>
+
+        <p>
+          A practical look at routes, stops, playlists,
+          snacks and small details that can make long drives
+          much more enjoyable.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-road-trip-planning.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 06 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Travel Essentials
+        </div>
+
+        <h3>
+          The Small Travel Essentials That Are Easy to Forget
+        </h3>
+
+        <p>
+          A useful checklist of everyday items that can make
+          airports, hotel stays and day trips a little more
+          convenient.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="travel-forgotten-essentials.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 07 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Scenic Places
+        </div>
+
+        <h3>
+          How to Find Beautiful Places Beyond the Main Attractions
+        </h3>
+
+        <p>
+          Explore a few research ideas for discovering
+          viewpoints, local streets and less obvious places
+          worth adding to a trip.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-beyond-tourist-spots.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 08 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Travel Photography
+        </div>
+
+        <h3>
+          Simple Ideas for Better Travel Photos
+        </h3>
+
+        <p>
+          Composition, natural light and timing can often
+          make a bigger difference than complicated camera
+          equipment.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-better-photos.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 09 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Food &amp; Travel
+        </div>
+
+        <h3>
+          Making Local Food Part of the Travel Experience
+        </h3>
+
+        <p>
+          From neighborhood markets to small cafés, discover
+          ways food can become one of the most memorable parts
+          of exploring somewhere new.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="travel-local-food-experience.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 10 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Accommodation
+        </div>
+
+        <h3>
+          What to Look for When Choosing a Place to Stay
+        </h3>
+
+        <p>
+          Beyond the room itself, location, surrounding
+          streets, transport and useful amenities can shape
+          the experience of an entire trip.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-choosing-accommodation.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 11 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Seasonal Travel
+        </div>
+
+        <h3>
+          Why the Season Can Completely Change a Destination
+        </h3>
+
+        <p>
+          Weather, crowds, landscapes and local events can
+          create very different experiences in the same place
+          throughout the year.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="travel-seasonal-destinations.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 12 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Slow Travel
+        </div>
+
+        <h3>
+          The Appeal of Staying Longer in One Place
+        </h3>
+
+        <p>
+          Slower travel can give you more time to understand
+          a destination, revisit favorite places and move
+          beyond a checklist of attractions.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          6 min read
+        </span>
+
+        <a
+          href="travel-slow-travel.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</main>
+
+
+<!-- SHARED FOOTER -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

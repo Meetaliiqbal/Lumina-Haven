@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Food &amp; Culinary Ideas — Lumina Haven</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fbfaf8;
+  --surface:#ffffff;
+  --ink:#24211d;
+  --subtle:#68635b;
+  --accent:#765638;
+  --line:#e5e0d8;
+  --soft:#f4f1eb;
+  --max-width:1040px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.75;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+
+  background:rgba(251,250,248,.96);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1180px;
+  height:72px;
+
+  margin:0 auto;
+  padding:0 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.4px;
+
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:21px;
+
+  font-size:12.5px;
+  font-weight:500;
+}
+
+.header-nav a{
+  color:var(--subtle);
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  padding:9px 16px;
+  border-radius:6px;
+
+  background:var(--ink);
+  color:#fff;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:72px 24px 48px;
+
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+
+  margin-bottom:18px;
+  padding:6px 14px;
+
+  border:1px solid #ddd5ca;
+  border-radius:4px;
+
+  background:#f5f0e9;
+  color:var(--accent);
+
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+}
+
+.page-intro h1{
+  max-width:760px;
+
+  margin:0 auto 17px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(38px,5.5vw,54px);
+  line-height:1.08;
+  font-weight:600;
+  letter-spacing:-.3px;
+}
+
+.page-intro p{
+  max-width:670px;
+
+  margin:0 auto;
+
+  color:var(--subtle);
+
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+
+/* =========================
+   ARTICLE AREA
+========================= */
+
+.article-area{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:0 24px 85px;
+}
+
+.article-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+
+  padding-bottom:14px;
+  margin-bottom:22px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.article-heading h2{
+  margin:0;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:28px;
+  font-weight:600;
+}
+
+.article-heading span{
+  color:#89847c;
+
+  font-size:11px;
+  font-weight:500;
+}
+
+
+/* =========================
+   ARTICLE GRID
+========================= */
+
+.article-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+}
+
+.article-card{
+  position:relative;
+
+  min-height:275px;
+
+  padding:24px 22px 21px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  background:var(--surface);
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.article-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:22px;
+  right:22px;
+
+  height:2px;
+
+  background:var(--accent);
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  transition:transform .22s ease;
+}
+
+.article-card:hover{
+  transform:translateY(-4px);
+
+  border-color:#d7cfc4;
+
+  box-shadow:0 12px 28px rgba(44,36,28,.06);
+}
+
+.article-card:hover::before{
+  transform:scaleX(1);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.article-category{
+  margin-bottom:14px;
+
+  color:var(--accent);
+
+  font-size:9.5px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.article-card h3{
+  margin:0 0 10px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:600;
+}
+
+.article-card p{
+  margin:0;
+
+  color:var(--subtle);
+
+  font-size:12.5px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.article-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:24px;
+  padding-top:15px;
+
+  border-top:1px solid #eeeae4;
+}
+
+.read-time{
+  color:#918c84;
+
+  font-size:10.5px;
+  font-weight:400;
+}
+
+.read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+
+  color:var(--ink);
+
+  font-size:11.5px;
+  font-weight:600;
+
+  transition:color .2s ease;
+}
+
+.read-more span{
+  transition:transform .2s ease;
+}
+
+.article-card:hover .read-more{
+  color:var(--accent);
+}
+
+.article-card:hover .read-more span{
+  transform:translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+
+  padding:52px 24px;
+
+  border-top:1px solid var(--line);
+
+  background:var(--soft);
+
+  text-align:center;
+
+  color:var(--subtle);
+
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+
+  gap:22px;
+
+  margin-bottom:18px;
+
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:700px;
+
+  margin:15px auto 0;
+
+  color:#8a857d;
+
+  font-size:10.5px;
+  line-height:1.65;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+  .article-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .header-nav{
+    gap:14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:620px){
+
+  .header-inner{
+    height:66px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .page-intro{
+    padding:48px 18px 34px;
+  }
+
+  .page-intro h1{
+    font-size:39px;
+  }
+
+  .page-intro p{
+    font-size:13.5px;
+  }
+
+  .article-area{
+    padding:0 16px 60px;
+  }
+
+  .article-heading{
+    align-items:center;
+  }
+
+  .article-heading h2{
+    font-size:25px;
+  }
+
+  .article-grid{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+
+  .article-card{
+    min-height:230px;
+    padding:23px 20px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SHARED HEADER -->
+
+<script src="header.js" defer></script>
+
+
+<!-- =========================
+     PAGE INTRO
+========================= -->
+
+<section class="page-intro">
+
+  <span class="eyebrow">
+    Culinary Journal
+  </span>
+
+  <h1>
+    Good Food, Simple Ideas
+  </h1>
+
+  <p>
+    Explore everyday cooking inspiration, seasonal
+    ingredients, easy meal ideas and thoughtful ways to
+    make ordinary meals a little more enjoyable.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     ARTICLE COLLECTION
+========================= -->
+
+<main class="article-area">
+
+  <div class="article-heading">
+
+    <h2>
+      Food &amp; Culinary Ideas
+    </h2>
+
+    <span>
+      12 Articles
+    </span>
+
+  </div>
+
+
+  <div class="article-grid">
+
+
+    <!-- ARTICLE 01 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Everyday Cooking
+        </div>
+
+        <h3>
+          Simple Meal Ideas for Busy Weeknights
+        </h3>
+
+        <p>
+          Easy combinations for those evenings when you
+          want something satisfying without spending hours
+          deciding what to cook.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-busy-weeknight-meals.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 02 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Breakfast
+        </div>
+
+        <h3>
+          Breakfast Ideas That Go Beyond the Usual Routine
+        </h3>
+
+        <p>
+          Fresh combinations for slow mornings, quick
+          starts and everything in between, using familiar
+          ingredients in different ways.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="food-breakfast-ideas.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 03 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Seasonal
+        </div>
+
+        <h3>
+          Seasonal Ingredients Worth Bringing Into Your Kitchen
+        </h3>
+
+        <p>
+          A look at how changing produce throughout the year
+          can add variety, color and freshness to everyday
+          meals.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-seasonal-ingredients.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 04 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Meal Prep
+        </div>
+
+        <h3>
+          A Relaxed Approach to Planning Meals for the Week
+        </h3>
+
+        <p>
+          Simple preparation habits that can make weekday
+          cooking easier without turning your kitchen into
+          a full-time project.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-weekly-meal-planning.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 05 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Pasta
+        </div>
+
+        <h3>
+          Easy Pasta Combinations for Any Evening
+        </h3>
+
+        <p>
+          Explore simple sauces, vegetables, herbs and
+          pantry staples that can turn pasta into a flexible
+          everyday meal.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="food-easy-pasta-combinations.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 06 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Snacks
+        </div>
+
+        <h3>
+          Simple Snack Ideas for Between-Meal Cravings
+        </h3>
+
+        <p>
+          From crisp and savory to naturally sweet,
+          discover approachable snack combinations for
+          different parts of the day.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="food-easy-snack-ideas.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 07 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Home Cooking
+        </div>
+
+        <h3>
+          Small Cooking Habits That Make Meals Better
+        </h3>
+
+        <p>
+          A collection of practical kitchen habits involving
+          preparation, timing and organization that can
+          improve everyday cooking.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-better-cooking-habits.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 08 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Desserts
+        </div>
+
+        <h3>
+          Simple Dessert Ideas for Casual Gatherings
+        </h3>
+
+        <p>
+          Easy sweet options that feel special enough for
+          sharing but remain approachable for relaxed meals
+          with friends or family.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-casual-dessert-ideas.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 09 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Drinks
+        </div>
+
+        <h3>
+          Refreshing Drink Ideas for Every Season
+        </h3>
+
+        <p>
+          From bright citrus combinations to cozy warm
+          drinks, explore simple ideas for making everyday
+          beverages more interesting.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="food-seasonal-drink-ideas.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 10 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Pantry
+        </div>
+
+        <h3>
+          Pantry Staples That Make Everyday Cooking Easier
+        </h3>
+
+        <p>
+          A practical collection of versatile ingredients
+          that can become the foundation for quick meals when
+          the fridge looks nearly empty.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-useful-pantry-staples.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 11 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Entertaining
+        </div>
+
+        <h3>
+          Creating a Relaxed Table for Friends and Family
+        </h3>
+
+        <p>
+          Simple food, serving and presentation ideas for
+          gatherings where the atmosphere matters just as
+          much as the menu.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="food-relaxed-dinner-gathering.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 12 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Food Inspiration
+        </div>
+
+        <h3>
+          How to Find New Meal Inspiration Without Overthinking It
+        </h3>
+
+        <p>
+          Practical ways to discover new combinations,
+          revisit old favorites and keep everyday meals from
+          becoming repetitive.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          6 min read
+        </span>
+
+        <a
+          href="food-meal-inspiration.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</main>
+
+
+<!-- SHARED FOOTER -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Mindset &amp; Everyday Wellbeing — Lumina Haven</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+  --page:#fbfaf8;
+  --surface:#ffffff;
+  --ink:#24211d;
+  --subtle:#68635b;
+  --accent:#765638;
+  --line:#e5e0d8;
+  --soft:#f4f1eb;
+  --max-width:1040px;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+
+  background:var(--page);
+  color:var(--ink);
+
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.75;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+
+  background:rgba(251,250,248,.96);
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  width:100%;
+  max-width:1180px;
+  height:72px;
+
+  margin:0 auto;
+  padding:0 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand-logo{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:27px;
+  font-weight:700;
+  letter-spacing:.4px;
+
+  color:var(--ink);
+  white-space:nowrap;
+}
+
+.brand-logo span{
+  color:var(--accent);
+  font-style:italic;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:21px;
+
+  font-size:12.5px;
+  font-weight:500;
+}
+
+.header-nav a{
+  color:var(--subtle);
+  white-space:nowrap;
+
+  transition:color .2s ease;
+}
+
+.header-nav a:hover{
+  color:var(--accent);
+}
+
+.header-nav .highlight-btn{
+  padding:9px 16px;
+  border-radius:6px;
+
+  background:var(--ink);
+  color:#fff;
+}
+
+.header-nav .highlight-btn:hover{
+  background:var(--accent);
+  color:#fff;
+}
+
+
+/* =========================
+   PAGE INTRO
+========================= */
+
+.page-intro{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:72px 24px 48px;
+
+  text-align:center;
+}
+
+.eyebrow{
+  display:inline-block;
+
+  margin-bottom:18px;
+  padding:6px 14px;
+
+  border:1px solid #ddd5ca;
+  border-radius:4px;
+
+  background:#f5f0e9;
+  color:var(--accent);
+
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:2.1px;
+  text-transform:uppercase;
+}
+
+.page-intro h1{
+  max-width:760px;
+
+  margin:0 auto 17px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(38px,5.5vw,54px);
+  line-height:1.08;
+  font-weight:600;
+}
+
+.page-intro p{
+  max-width:650px;
+
+  margin:0 auto;
+
+  color:var(--subtle);
+
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+}
+
+
+/* =========================
+   ARTICLE AREA
+========================= */
+
+.article-area{
+  width:100%;
+  max-width:var(--max-width);
+
+  margin:0 auto;
+
+  padding:0 24px 85px;
+}
+
+.article-heading{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+
+  padding-bottom:14px;
+  margin-bottom:22px;
+
+  border-bottom:1px solid var(--line);
+}
+
+.article-heading h2{
+  margin:0;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:28px;
+  font-weight:600;
+}
+
+.article-heading span{
+  color:#89847c;
+
+  font-size:11px;
+  font-weight:500;
+}
+
+
+/* =========================
+   ARTICLE GRID
+========================= */
+
+.article-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+}
+
+.article-card{
+  position:relative;
+
+  min-height:275px;
+
+  padding:24px 22px 21px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  background:var(--surface);
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
+}
+
+.article-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:22px;
+  right:22px;
+
+  height:2px;
+
+  background:var(--accent);
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  transition:transform .22s ease;
+}
+
+.article-card:hover{
+  transform:translateY(-4px);
+
+  border-color:#d7cfc4;
+
+  box-shadow:0 12px 28px rgba(44,36,28,.06);
+}
+
+.article-card:hover::before{
+  transform:scaleX(1);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.article-category{
+  margin-bottom:14px;
+
+  color:var(--accent);
+
+  font-size:9.5px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.article-card h3{
+  margin:0 0 10px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:22px;
+  line-height:1.2;
+  font-weight:600;
+}
+
+.article-card p{
+  margin:0;
+
+  color:var(--subtle);
+
+  font-size:12.5px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.article-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:24px;
+  padding-top:15px;
+
+  border-top:1px solid #eeeae4;
+}
+
+.read-time{
+  color:#918c84;
+
+  font-size:10.5px;
+  font-weight:400;
+}
+
+.read-more{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+
+  color:var(--ink);
+
+  font-size:11.5px;
+  font-weight:600;
+
+  transition:color .2s ease;
+}
+
+.read-more span{
+  transition:transform .2s ease;
+}
+
+.article-card:hover .read-more{
+  color:var(--accent);
+}
+
+.article-card:hover .read-more span{
+  transform:translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  width:100%;
+
+  padding:52px 24px;
+
+  border-top:1px solid var(--line);
+
+  background:var(--soft);
+
+  text-align:center;
+
+  color:var(--subtle);
+
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+
+  gap:22px;
+
+  margin-bottom:18px;
+
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:700px;
+
+  margin:15px auto 0;
+
+  color:#8a857d;
+
+  font-size:10.5px;
+  line-height:1.65;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+  .article-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .header-nav{
+    gap:14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:620px){
+
+  .header-inner{
+    height:66px;
+    padding:0 16px;
+  }
+
+  .brand-logo{
+    font-size:24px;
+  }
+
+  .desktop-nav{
+    display:none;
+  }
+
+  .page-intro{
+    padding:48px 18px 34px;
+  }
+
+  .page-intro h1{
+    font-size:39px;
+  }
+
+  .page-intro p{
+    font-size:13.5px;
+  }
+
+  .article-area{
+    padding:0 16px 60px;
+  }
+
+  .article-heading{
+    align-items:center;
+  }
+
+  .article-heading h2{
+    font-size:25px;
+  }
+
+  .article-grid{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+
+  .article-card{
+    min-height:230px;
+    padding:23px 20px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SHARED HEADER
+========================= -->
+
+<script src="header.js" defer></script>
+
+
+<!-- =========================
+     PAGE INTRO
+========================= -->
+
+<section class="page-intro">
+
+  <span class="eyebrow">
+    Mindset Journal
+  </span>
+
+  <h1>
+    Small Shifts for a Clearer, More Intentional Life
+  </h1>
+
+  <p>
+    Explore thoughtful ideas around routines, focus,
+    perspective and everyday habits that can help make
+    busy days feel a little more balanced.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     ARTICLE COLLECTION
+========================= -->
+
+<main class="article-area">
+
+  <div class="article-heading">
+
+    <h2>
+      Mindset &amp; Everyday Living
+    </h2>
+
+    <span>
+      12 Articles
+    </span>
+
+  </div>
+
+
+  <div class="article-grid">
+
+
+    <!-- ARTICLE 01 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Daily Habits
+        </div>
+
+        <h3>
+          Building a Morning Routine That Actually Fits Your Day
+        </h3>
+
+        <p>
+          Instead of copying complicated routines, explore
+          a simpler approach to creating a morning rhythm
+          that works with your own schedule.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="mindset-morning-routine.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 02 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Focus
+        </div>
+
+        <h3>
+          Simple Ways to Protect Your Attention During Busy Days
+        </h3>
+
+        <p>
+          Discover practical ways to reduce interruptions,
+          organize priorities and give important tasks more
+          uninterrupted attention.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-protect-your-focus.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 03 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Perspective
+        </div>
+
+        <h3>
+          Learning to Leave More Room for Imperfect Days
+        </h3>
+
+        <p>
+          A realistic look at expectations, unfinished plans
+          and why every day does not need to be perfectly
+          productive.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-imperfect-days.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 04 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Digital Balance
+        </div>
+
+        <h3>
+          Creating Healthier Boundaries Around Your Screen Time
+        </h3>
+
+        <p>
+          Explore small changes to notifications, app
+          placement and daily habits that can make digital
+          time feel more intentional.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="mindset-digital-boundaries.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 05 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Reflection
+        </div>
+
+        <h3>
+          A Simple Evening Reset for Tomorrow
+        </h3>
+
+        <p>
+          A few quiet minutes at the end of the day can
+          help you clear unfinished thoughts and make the
+          next morning easier to approach.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          3 min read
+        </span>
+
+        <a
+          href="mindset-evening-reset.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 06 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Priorities
+        </div>
+
+        <h3>
+          How to Make a Shorter To-Do List More Useful
+        </h3>
+
+        <p>
+          Learn how reducing unnecessary tasks can make
+          priorities easier to see and daily planning less
+          overwhelming.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-better-to-do-list.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 07 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Personal Space
+        </div>
+
+        <h3>
+          Why Your Surroundings Can Affect Your Daily Rhythm
+        </h3>
+
+        <p>
+          Explore the relationship between your environment,
+          everyday routines and the small visual cues that
+          shape how you move through your day.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="mindset-surroundings-and-routine.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 08 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Creativity
+        </div>
+
+        <h3>
+          Making Space for Creative Thinking in Ordinary Days
+        </h3>
+
+        <p>
+          Simple prompts and changes in routine can create
+          more opportunities for ideas to develop without
+          forcing constant inspiration.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="mindset-creative-thinking.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 09 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Slow Moments
+        </div>
+
+        <h3>
+          Finding More Enjoyment in Ordinary Daily Rituals
+        </h3>
+
+        <p>
+          From a quiet cup of coffee to an evening walk,
+          explore ways to become more present during
+          familiar parts of the day.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-enjoy-simple-rituals.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 10 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Planning
+        </div>
+
+        <h3>
+          A More Flexible Way to Plan Your Week
+        </h3>
+
+        <p>
+          Instead of filling every hour, learn how flexible
+          planning can leave room for unexpected tasks,
+          rest and changing priorities.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          5 min read
+        </span>
+
+        <a
+          href="mindset-flexible-week-planning.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 11 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Self-Reflection
+        </div>
+
+        <h3>
+          Questions Worth Asking When Life Feels Too Busy
+        </h3>
+
+        <p>
+          A collection of simple reflection prompts for
+          identifying what deserves your attention and what
+          can comfortably wait.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-reflection-questions.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 12 -->
+
+    <article class="article-card">
+
+      <div>
+
+        <div class="article-category">
+          Fresh Starts
+        </div>
+
+        <h3>
+          Starting Again Without Rebuilding Everything
+        </h3>
+
+        <p>
+          Sometimes a reset does not require a complete
+          lifestyle overhaul. Explore how small adjustments
+          can create a useful new starting point.
+        </p>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <span class="read-time">
+          4 min read
+        </span>
+
+        <a
+          href="mindset-starting-again.html"
+          class="read-more"
+        >
+          Read article <span>→</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</main>
+
+
+<!-- =========================
+     SHARED FOOTER
+========================= -->
+
+<script src="footer.js" defer></script>
+
+
+</body>
+</html>

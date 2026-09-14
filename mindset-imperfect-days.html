@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Learning to Leave More Room for Imperfect Days | Lumina Haven</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+  --bg:#fbfaf7;
+  --surface:#ffffff;
+  --soft:#f2f5ef;
+  --text:#20231f;
+  --muted:#686d65;
+  --accent:#5b704f;
+  --accent-dark:#475a3e;
+  --border:#e2e5de;
+  --max:720px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  width:100%;
+  min-width:0;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',Arial,sans-serif;
+  line-height:1.7;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+#site-header,
+header{
+  width:100%;
+}
+
+.page{
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:48px 22px 70px;
+}
+
+/* Article Styling */
+.article-header{
+  text-align:center;
+  margin-bottom:36px;
+}
+
+.eyebrow{
+  display:inline-block;
+  margin-bottom:14px;
+  padding:6px 13px;
+  background:#f0f3ed;
+  border:1px solid #dce3d7;
+  border-radius:30px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.article-header h1{
+  margin:0 0 14px;
+  font-family:'Libre Baskerville',Georgia,serif;
+  font-size:clamp(28px,4vw,38px);
+  line-height:1.25;
+  font-weight:400;
+}
+
+.article-header p.subtitle{
+  max-width:580px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+}
+
+.article-content{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 12px 40px rgba(35,42,30,.045);
+  padding:40px 35px;
+}
+
+.article-content p{
+  margin:0 0 20px;
+  color:#3a3e38;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.article-content h3{
+  margin:32px 0 12px;
+  font-family:'Libre Baskerville',Georgia,serif;
+  font-size:20px;
+  font-weight:400;
+  color:var(--text);
+}
+
+.article-content ul{
+  margin:0 0 20px;
+  padding-left:20px;
+  color:#3a3e38;
+  font-size:14px;
+}
+
+.article-content li{
+  margin-bottom:10px;
+  line-height:1.7;
+}
+
+.article-content li strong{
+  color:var(--text);
+}
+
+.divider{
+  border:0;
+  height:1px;
+  background:var(--border);
+  margin:32px 0;
+}
+
+/* CTA Box Inside Article */
+.article-cta-box{
+  margin-top:40px;
+  padding:30px;
+  background:var(--soft);
+  border:1px solid #dbe3d5;
+  border-radius:14px;
+  text-align:center;
+}
+
+.article-cta-box h3{
+  margin:0 0 8px;
+  font-family:'Libre Baskerville',Georgia,serif;
+  font-size:20px;
+  font-weight:400;
+}
+
+.article-cta-box p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.cta-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  max-width:380px;
+  padding:15px 22px;
+  background:var(--accent);
+  color:#ffffff;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:600;
+  transition:background .2s ease, transform .2s ease;
+  box-shadow:0 4px 12px rgba(91,112,79,0.2);
+  text-decoration:none;
+}
+
+.cta-btn:hover{
+  background:var(--accent-dark);
+  transform:translateY(-1px);
+}
+
+@media(max-width:650px){
+  .page{
+    padding:30px 15px 50px;
+  }
+
+  .article-content{
+    padding:26px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+  <!-- Dynamic Header Injection Point -->
+  <div id="site-header"></div>
+
+  <main class="page">
+
+    <!-- Article Header -->
+    <header class="article-header">
+
+      <span class="eyebrow">
+        Perspective &amp; Everyday Balance
+      </span>
+
+      <h1>
+        Learning to Leave More Room for Imperfect Days
+      </h1>
+
+      <p class="subtitle">
+        A realistic look at expectations, unfinished plans and why every day does not need to be perfectly productive.
+      </p>
+
+    </header>
+
+    <!-- Article Body Container -->
+    <article class="article-content">
+
+      <p>
+        Some days seem to arrive with a clear plan. There is enough time for the important tasks, the small errands and perhaps even a little space to do something enjoyable. Other days seem to unravel almost immediately. A delayed start, an unexpected responsibility or simply a lack of energy can change everything that was supposed to happen.
+      </p>
+
+      <p>
+        It is easy to interpret those days as evidence that something has gone wrong. But an imperfect day is not necessarily an unproductive one, and it does not need to be rescued by an ambitious evening catch-up session. Learning to make room for variation can create a much more realistic relationship with routines, plans and personal expectations.
+      </p>
+
+      <hr class="divider">
+
+      <h3>
+        1. Stop Measuring Every Day Against an Ideal Version
+      </h3>
+
+      <p>
+        One of the quickest ways to make an ordinary day feel disappointing is to compare it with a version of the day that was never guaranteed to happen.
+      </p>
+
+      <ul>
+        <li>
+          <strong>The Shift:</strong>
+          Rather than asking whether you completed everything you imagined, consider whether you handled the most important things reasonably well.
+        </li>
+
+        <li>
+          <strong>Why It Helps:</strong>
+          This creates a more useful measure of progress. A day can still have value even when the original plan changes considerably.
+        </li>
+      </ul>
+
+      <h3>
+        2. Separate Priorities from Preferences
+      </h3>
+
+      <p>
+        Not every item on a daily list carries the same weight. Some tasks genuinely need attention, while others would simply have been nice to complete.
+      </p>
+
+      <ul>
+        <li>
+          <strong>The Concept:</strong>
+          Identify the few things that genuinely matter before deciding what else belongs on the day.
+        </li>
+
+        <li>
+          <strong>Why It Works:</strong>
+          When plans become crowded, knowing which tasks are essential makes it easier to let less important things move without feeling as though the entire day has been lost.
+        </li>
+      </ul>
+
+      <!-- Savings & Offers CTA Box -->
+      <div class="article-cta-box">
+
+        <h3>
+          Explore More Useful Resources
+        </h3>
+
+        <p>
+          If you are looking for practical ideas and resources that may be useful for your everyday needs, take a look at the options available.
+        </p>
+
+        <a
+          href="quotesoff.html"
+          class="cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>View Available Options</span>
+
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+      </div>
+
+      <h3>
+        3. Give Yourself a Smaller Definition of Done
+      </h3>
+
+      <p>
+        When a day becomes difficult, continuing to hold yourself to the original workload can create unnecessary pressure. A better approach is to adjust the definition of what a completed day looks like.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Choose the Minimum:</strong>
+          Decide what would make the day feel reasonably handled rather than attempting to recover every missed task.
+        </li>
+
+        <li>
+          <strong>Protect Your Energy:</strong>
+          Completing fewer meaningful tasks can be more useful than filling the remaining hours with rushed work simply to satisfy an old plan.
+        </li>
+      </ul>
+
+      <hr class="divider">
+
+      <h3>
+        4. Avoid Turning One Difficult Day into a Bigger Story
+      </h3>
+
+      <p>
+        A disrupted day can sometimes become a source of unnecessary conclusions. Missing a routine once can quickly turn into thoughts about having no discipline, no consistency or no ability to stay organized.
+      </p>
+
+      <p>
+        It is usually more helpful to treat the event as specific rather than permanent. Today was complicated. Tomorrow may be different. Keeping that distinction clear prevents one difficult experience from becoming a judgement about your entire routine or character.
+      </p>
+
+      <h3>
+        Simple Ways to Make Imperfect Days Easier
+      </h3>
+
+      <ul>
+        <li>
+          <strong>Keep One Priority:</strong>
+          If the day becomes crowded, identify the single task that matters most.
+        </li>
+
+        <li>
+          <strong>Leave Some Tasks Unfinished:</strong>
+          Not everything needs to be completed before you stop for the day.
+        </li>
+
+        <li>
+          <strong>Use Flexible Plans:</strong>
+          Build enough space into your schedule for delays, changes and unexpected responsibilities.
+        </li>
+
+        <li>
+          <strong>Reset Without Punishing Yourself:</strong>
+          A new day does not require a dramatic correction. Simply return to the next useful step.
+        </li>
+      </ul>
+
+      <p>
+        The goal is not to create a life where every day runs perfectly. It is to build enough flexibility that an ordinary disruption does not feel like a personal failure. When expectations leave room for real life, routines become easier to maintain and progress becomes something that can continue even when the day looks different from the original plan.
+      </p>
+
+    </article>
+
+  </main>
+
+  <!-- Header & Footer Scripts -->
+  <script src="header.js" defer></script>
+  <script src="footer.js" defer></script>
+
+</body>
+</html>

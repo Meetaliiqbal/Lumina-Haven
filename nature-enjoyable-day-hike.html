@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Making a Day Hike More Enjoyable — Lumina Haven</title>
+<meta name="description" content="Practical ideas for making a day hike more enjoyable, from choosing a comfortable route to leaving time to notice the landscape around you.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fafbf8;
+  --surface:#ffffff;
+  --ink:#20231e;
+  --subtle:#62685e;
+  --accent:#536b4b;
+  --line:#dfe4dc;
+  --soft:#f0f3ed;
+  --max:900px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-hero{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:70px 24px 45px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:6px 15px;
+  background:#eef2eb;
+  border:1px solid #d5ddd0;
+  border-radius:4px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-hero h1{
+  max-width:760px;
+  margin:0 auto 18px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(40px,6vw,58px);
+  line-height:1.08;
+  font-weight:600;
+}
+
+.article-hero .intro{
+  max-width:670px;
+  margin:0 auto;
+  color:var(--subtle);
+  font-size:15px;
+  font-weight:300;
+  line-height:1.8;
+}
+
+.article-meta{
+  margin-top:22px;
+  color:#858c81;
+  font-size:11px;
+}
+
+.article-wrapper{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.article-content{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:45px 52px;
+}
+
+.back-link{
+  display:inline-block;
+  margin-bottom:28px;
+  color:var(--subtle);
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.back-link:hover{color:var(--accent);}
+
+.article-content h2{
+  margin:34px 0 12px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.article-content h2:first-child{margin-top:0;}
+
+.article-content h3{
+  margin:27px 0 9px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:23px;
+  font-weight:600;
+}
+
+.article-content p{
+  margin:0 0 17px;
+  color:#50564d;
+  font-size:14px;
+  line-height:1.85;
+  font-weight:300;
+}
+
+.article-content ul{
+  margin:10px 0 22px;
+  padding-left:22px;
+}
+
+.article-content li{
+  margin-bottom:9px;
+  color:#50564d;
+  font-size:14px;
+  font-weight:300;
+}
+
+.article-note{
+  margin:28px 0;
+  padding:20px 22px;
+  background:#f3f5f0;
+  border-left:3px solid var(--accent);
+  border-radius:4px;
+}
+
+.article-note p{margin:0;}
+
+.resource-card{
+  margin-top:42px;
+  padding:36px 30px;
+  text-align:center;
+  background:linear-gradient(135deg,#f0f3ed,#e7ede3);
+  border:1px solid #d4ddcf;
+  border-radius:12px;
+}
+
+.resource-card .small-label{
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.resource-card h2{
+  margin:0 0 11px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+}
+
+.resource-card p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--subtle);
+  font-size:13px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.resource-btn{
+  display:inline-block;
+  padding:13px 27px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:600;
+  transition:transform .2s ease,background .2s ease;
+}
+
+.resource-btn:hover{
+  background:#40563a;
+  transform:translateY(-2px);
+}
+
+.resource-disclosure{
+  margin-top:13px !important;
+  color:#858c81 !important;
+  font-size:10px !important;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--line);
+  background:#f7f5f0;
+  padding:50px 24px;
+  text-align:center;
+  color:var(--subtle);
+  font-size:13px;
+  margin-top:80px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:var(--accent);}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#88857c;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:650px){
+  .article-hero{padding:48px 18px 32px;}
+  .article-hero h1{font-size:40px;}
+  .article-hero .intro{font-size:13.5px;}
+  .article-wrapper{padding:0 15px 55px;}
+  .article-content{padding:30px 21px;}
+  .article-content h2{font-size:27px;}
+  .article-content p,
+  .article-content li{font-size:13.5px;}
+  .resource-card{padding:30px 20px;}
+  .site-footer{padding:42px 18px;}
+  .footer-links{gap:14px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<section class="article-hero">
+  <span class="article-category">Hiking</span>
+
+  <h1>Making a Day Hike More Enjoyable</h1>
+
+  <p class="intro">
+    A good day hike is not only about reaching a destination.
+    Choosing a comfortable pace, preparing thoughtfully and
+    leaving room to enjoy the surroundings can make the whole
+    experience more rewarding.
+  </p>
+
+  <div class="article-meta">5 min read · Nature Journal</div>
+</section>
+
+<main class="article-wrapper">
+  <article class="article-content">
+
+    <a href="nature.html" class="back-link">← Back to Nature Journal</a>
+
+    <h2>Choose a Route That Fits the Day</h2>
+
+    <p>
+      A hike becomes easier to enjoy when the route matches
+      the amount of time and energy you actually have.
+      There is little benefit in choosing an ambitious plan
+      if it leaves you rushing through the landscape.
+    </p>
+
+    <p>
+      Think about how long you want to be outside, what kind
+      of terrain you are comfortable with and how much time
+      you would like to spend stopping along the way.
+    </p>
+
+    <h2>Prepare Without Overcomplicating It</h2>
+
+    <p>
+      A few practical preparations can make a noticeable
+      difference. Comfortable footwear, suitable clothing,
+      water and a simple way to keep track of your route can
+      help you focus more on the experience itself.
+    </p>
+
+    <p>
+      Check the conditions before setting out and make sure
+      your plans suit the environment and your own level of
+      experience.
+    </p>
+
+    <div class="article-note">
+      <p>
+        <strong>Keep the plan realistic:</strong> Leave some
+        flexibility in the day rather than building the entire
+        hike around a strict timetable.
+      </p>
+    </div>
+
+    <h2>Walk at a Comfortable Pace</h2>
+
+    <p>
+      There is no need to turn every hike into a test of speed.
+      A steady pace can make it easier to notice the landscape,
+      stop when something catches your attention and enjoy the
+      surroundings.
+    </p>
+
+    <p>
+      Taking occasional pauses can also help break the route
+      into smaller, more manageable sections.
+    </p>
+
+    <div class="resource-card">
+      <div class="small-label">Explore Outdoors</div>
+
+      <h2>Planning More Time in Nature?</h2>
+
+      <p>
+        Find more outdoor inspiration and useful resources for
+        discovering activities, places and ideas for your next
+        time outside.
+      </p>
+
+      <a href="nature-offer.html" class="resource-btn" target="_blank" rel="noopener noreferrer">
+        Browse Outdoor Resources →
+      </a>
+
+      <p class="resource-disclosure">
+        This page may contain links to external services or
+        promotional offers. Availability and terms may vary.
+      </p>
+    </div>
+
+    <h2>Give Yourself Time to Stop</h2>
+
+    <p>
+      Some of the best parts of a hike happen when you stop
+      moving. A viewpoint, interesting tree, changing light
+      or quiet section of the trail may be worth a few extra
+      minutes.
+    </p>
+
+    <ul>
+      <li>Pause when the landscape changes.</li>
+      <li>Take time to look around rather than only ahead.</li>
+      <li>Use natural stopping points to rest.</li>
+      <li>Allow extra time if you want to take photographs.</li>
+    </ul>
+
+    <h2>Keep the Experience Comfortable</h2>
+
+    <p>
+      Small details can affect how enjoyable a long outdoor
+      day feels. Layers that can be adjusted, comfortable
+      clothing and enough time for breaks can all help.
+    </p>
+
+    <p>
+      The aim is to create a day that feels enjoyable rather
+      than rushed from beginning to end.
+    </p>
+
+    <h2>Enjoy the Journey as Much as the Destination</h2>
+
+    <p>
+      A hike does not have to revolve around reaching one
+      particular point. The changing scenery, sounds and
+      smaller discoveries along the route can be just as
+      meaningful.
+    </p>
+
+    <p>
+      By choosing a realistic route and giving yourself enough
+      time to slow down, a simple day outdoors can become an
+      experience you genuinely look forward to repeating.
+    </p>
+
+  </article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

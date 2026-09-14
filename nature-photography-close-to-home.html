@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Finding Interesting Nature Photos Close to Home — Lumina Haven</title>
+<meta name="description" content="Simple photography ideas for finding interesting nature subjects close to home and seeing familiar outdoor spaces in a different way.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fafbf8;
+  --surface:#ffffff;
+  --ink:#20231e;
+  --subtle:#62685e;
+  --accent:#536b4b;
+  --line:#dfe4dc;
+  --soft:#f0f3ed;
+  --max:900px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-hero{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:70px 24px 45px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:6px 15px;
+  background:#eef2eb;
+  border:1px solid #d5ddd0;
+  border-radius:4px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-hero h1{
+  max-width:760px;
+  margin:0 auto 18px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(40px,6vw,58px);
+  line-height:1.08;
+  font-weight:600;
+}
+
+.article-hero .intro{
+  max-width:670px;
+  margin:0 auto;
+  color:var(--subtle);
+  font-size:15px;
+  font-weight:300;
+  line-height:1.8;
+}
+
+.article-meta{
+  margin-top:22px;
+  color:#858c81;
+  font-size:11px;
+}
+
+.article-wrapper{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.article-content{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:45px 52px;
+}
+
+.back-link{
+  display:inline-block;
+  margin-bottom:28px;
+  color:var(--subtle);
+  font-size:13px;
+  font-weight:500;
+}
+
+.back-link:hover{color:var(--accent);}
+
+.article-content h2{
+  margin:34px 0 12px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.article-content h2:first-child{margin-top:0;}
+
+.article-content p{
+  margin:0 0 17px;
+  color:#50564d;
+  font-size:14px;
+  line-height:1.85;
+  font-weight:300;
+}
+
+.article-content ul{
+  margin:10px 0 22px;
+  padding-left:22px;
+}
+
+.article-content li{
+  margin-bottom:9px;
+  color:#50564d;
+  font-size:14px;
+  font-weight:300;
+}
+
+.article-note{
+  margin:28px 0;
+  padding:20px 22px;
+  background:#f3f5f0;
+  border-left:3px solid var(--accent);
+  border-radius:4px;
+}
+
+.article-note p{margin:0;}
+
+.resource-card{
+  margin-top:42px;
+  padding:36px 30px;
+  text-align:center;
+  background:linear-gradient(135deg,#f0f3ed,#e7ede3);
+  border:1px solid #d4ddcf;
+  border-radius:12px;
+}
+
+.resource-card .small-label{
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.resource-card h2{
+  margin:0 0 11px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+}
+
+.resource-card p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--subtle);
+  font-size:13px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.resource-btn{
+  display:inline-block;
+  padding:13px 27px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.resource-btn:hover{
+  background:#40563a;
+  transform:translateY(-2px);
+}
+
+.resource-disclosure{
+  margin-top:13px !important;
+  color:#858c81 !important;
+  font-size:10px !important;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--line);
+  background:#f7f5f0;
+  padding:50px 24px;
+  text-align:center;
+  color:var(--subtle);
+  font-size:13px;
+  margin-top:80px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{color:var(--subtle);}
+.footer-links a:hover{color:var(--accent);}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#88857c;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:650px){
+  .article-hero{padding:48px 18px 32px;}
+  .article-hero h1{font-size:40px;}
+  .article-hero .intro{font-size:13.5px;}
+  .article-wrapper{padding:0 15px 55px;}
+  .article-content{padding:30px 21px;}
+  .article-content h2{font-size:27px;}
+  .article-content p,
+  .article-content li{font-size:13.5px;}
+  .resource-card{padding:30px 20px;}
+  .site-footer{padding:42px 18px;}
+  .footer-links{gap:14px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<section class="article-hero">
+  <span class="article-category">Outdoor Photography</span>
+
+  <h1>Finding Interesting Nature Photos Close to Home</h1>
+
+  <p class="intro">
+    You do not need an exotic destination to take interesting
+    nature photographs. Familiar parks, gardens, streets and
+    nearby green spaces can offer plenty of small details worth
+    noticing.
+  </p>
+
+  <div class="article-meta">5 min read · Nature Journal</div>
+</section>
+
+<main class="article-wrapper">
+  <article class="article-content">
+
+    <a href="nature.html" class="back-link">← Back to Nature Journal</a>
+
+    <h2>Start by Looking Differently</h2>
+
+    <p>
+      When you visit the same places regularly, it is easy to
+      stop noticing them. Photography can change that by giving
+      you a reason to look more carefully at details you might
+      normally walk past.
+    </p>
+
+    <p>
+      Instead of searching for a dramatic landscape, look for
+      smaller subjects such as leaves, textures, shadows,
+      branches, flowers or patterns created by natural light.
+    </p>
+
+    <h2>Follow the Light</h2>
+
+    <p>
+      Light can completely change the appearance of a familiar
+      subject. The same tree, wall or patch of greenery may
+      look very different depending on the time of day and
+      weather.
+    </p>
+
+    <p>
+      If you regularly walk in the same area, try photographing
+      one subject at different times. Comparing the results can
+      make you more aware of how light shapes an outdoor scene.
+    </p>
+
+    <div class="article-note">
+      <p>
+        <strong>A useful challenge:</strong> Choose one small
+        natural subject and try photographing it from several
+        angles instead of immediately moving on.
+      </p>
+    </div>
+
+    <h2>Look for Texture and Detail</h2>
+
+    <p>
+      Nature photography does not always need a wide landscape.
+      Close details can be just as interesting. Rough bark,
+      overlapping leaves, stones, seed heads and natural
+      patterns can create strong compositions.
+    </p>
+
+    <p>
+      Getting closer to smaller details can also help you
+      discover subjects in places you thought you already knew.
+    </p>
+
+    <div class="resource-card">
+      <div class="small-label">Nature Inspiration</div>
+
+      <h2>Find More Ideas for Time Outdoors</h2>
+
+      <p>
+        Explore more outdoor inspiration and simple ideas for
+        discovering interesting places, activities and moments
+        close to home.
+      </p>
+
+      <a href="nature-offer.html" class="resource-btn" target="_blank" rel="noopener noreferrer">
+        Discover More Outdoor Ideas →
+      </a>
+
+      <p class="resource-disclosure">
+        This page may contain links to external services or
+        promotional offers. Availability and terms may vary.
+      </p>
+    </div>
+
+    <h2>Change Your Point of View</h2>
+
+    <ul>
+      <li>Try photographing from a lower position.</li>
+      <li>Look upward through branches and leaves.</li>
+      <li>Use natural lines to guide attention.</li>
+      <li>Experiment with close-up details.</li>
+    </ul>
+
+    <p>
+      Small changes in your position can make an ordinary
+      subject feel completely different in a photograph.
+    </p>
+
+    <h2>Use the Seasons to Your Advantage</h2>
+
+    <p>
+      The same location can provide different photographic
+      opportunities throughout the year. Changes in colour,
+      growth, weather and daylight naturally create new subjects.
+    </p>
+
+    <p>
+      This is another reason to revisit places close to home
+      rather than always searching for somewhere new.
+    </p>
+
+    <h2>Make Photography Part of the Walk</h2>
+
+    <p>
+      Photography can become a useful reason to slow down
+      without turning every outdoor visit into a formal photo
+      session.
+    </p>
+
+    <p>
+      Take a few photographs when something catches your eye,
+      then put the camera or phone away and continue enjoying
+      the walk. The goal is to notice more, not simply to take
+      more pictures.
+    </p>
+
+  </article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Creating a Small Outdoor Garden Space — Lumina Haven</title>
+<meta name="description" content="Simple ideas for creating a small outdoor garden space with plants, practical details and a comfortable place to enjoy it.">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fafbf8;
+  --surface:#ffffff;
+  --ink:#20231e;
+  --subtle:#62685e;
+  --accent:#536b4b;
+  --line:#dfe4dc;
+  --soft:#f0f3ed;
+  --max:900px;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   ARTICLE HEADER
+========================= */
+
+.article-hero{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:70px 24px 45px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:6px 15px;
+
+  background:#eef2eb;
+  border:1px solid #d5ddd0;
+  border-radius:4px;
+
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-hero h1{
+  max-width:760px;
+  margin:0 auto 18px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(40px,6vw,58px);
+  line-height:1.08;
+  font-weight:600;
+}
+
+.article-hero .intro{
+  max-width:670px;
+  margin:0 auto;
+
+  color:var(--subtle);
+  font-size:15px;
+  font-weight:300;
+  line-height:1.8;
+}
+
+.article-meta{
+  margin-top:22px;
+
+  color:#858c81;
+  font-size:11px;
+}
+
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.article-wrapper{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.article-content{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:45px 52px;
+}
+
+.back-link{
+  display:inline-block;
+  margin-bottom:28px;
+  color:var(--subtle);
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.back-link:hover{
+  color:var(--accent);
+}
+
+.article-content h2{
+  margin:34px 0 12px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.article-content h2:first-child{
+  margin-top:0;
+}
+
+.article-content h3{
+  margin:27px 0 9px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:23px;
+  font-weight:600;
+}
+
+.article-content p{
+  margin:0 0 17px;
+
+  color:#50564d;
+  font-size:14px;
+  line-height:1.85;
+  font-weight:300;
+}
+
+.article-content ul{
+  margin:10px 0 22px;
+  padding-left:22px;
+}
+
+.article-content li{
+  margin-bottom:9px;
+
+  color:#50564d;
+  font-size:14px;
+  font-weight:300;
+}
+
+.article-note{
+  margin:28px 0;
+  padding:20px 22px;
+
+  background:#f3f5f0;
+  border-left:3px solid var(--accent);
+  border-radius:4px;
+}
+
+.article-note p{
+  margin:0;
+}
+
+
+/* =========================
+   CTA CARD
+========================= */
+
+.resource-card{
+  margin-top:42px;
+  padding:36px 30px;
+
+  text-align:center;
+
+  background:linear-gradient(135deg,#f0f3ed,#e7ede3);
+
+  border:1px solid #d4ddcf;
+  border-radius:12px;
+}
+
+.resource-card .small-label{
+  margin-bottom:10px;
+
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.resource-card h2{
+  margin:0 0 11px;
+
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+}
+
+.resource-card p{
+  max-width:570px;
+  margin:0 auto 22px;
+
+  color:var(--subtle);
+  font-size:13px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.resource-btn{
+  display:inline-block;
+
+  padding:13px 27px;
+
+  background:var(--accent);
+  color:#fff;
+
+  border-radius:6px;
+
+  font-size:12px;
+  font-weight:600;
+
+  transition:transform .2s ease,background .2s ease;
+}
+
+.resource-btn:hover{
+  background:#40563a;
+  transform:translateY(-2px);
+}
+
+.resource-disclosure{
+  margin-top:13px !important;
+
+  color:#858c81 !important;
+  font-size:10px !important;
+}
+
+
+/* =========================
+   SHARED FOOTER CSS
+========================= */
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--line);
+  background:#f7f5f0;
+  padding:50px 24px;
+  text-align:center;
+  color:var(--subtle);
+  font-size:13px;
+  margin-top:80px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{
+  color:var(--accent);
+}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#88857c;
+  line-height:1.6;
+  font-weight:300;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+  .article-hero{
+    padding:48px 18px 32px;
+  }
+
+  .article-hero h1{
+    font-size:40px;
+  }
+
+  .article-hero .intro{
+    font-size:13.5px;
+  }
+
+  .article-wrapper{
+    padding:0 15px 55px;
+  }
+
+  .article-content{
+    padding:30px 21px;
+  }
+
+  .article-content h2{
+    font-size:27px;
+  }
+
+  .article-content p,
+  .article-content li{
+    font-size:13.5px;
+  }
+
+  .resource-card{
+    padding:30px 20px;
+  }
+
+  .site-footer{
+    padding:42px 18px;
+  }
+
+  .footer-links{
+    gap:14px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Shared Header -->
+<script src="header.js" defer></script>
+
+
+<section class="article-hero">
+
+  <span class="article-category">
+    Gardens
+  </span>
+
+  <h1>
+    Creating a Small Outdoor Garden Space
+  </h1>
+
+  <p class="intro">
+    A small balcony, patio or garden corner can become
+    a welcoming place with a thoughtful mix of greenery,
+    practical furniture and a few personal details.
+  </p>
+
+  <div class="article-meta">
+    5 min read · Nature Journal
+  </div>
+
+</section>
+
+
+<main class="article-wrapper">
+
+  <article class="article-content">
+
+    <a href="nature.html" class="back-link">
+      ← Back to Nature Journal
+    </a>
+
+
+    <h2>
+      Start With the Space You Already Have
+    </h2>
+
+    <p>
+      Creating an outdoor garden does not require a large
+      yard. A balcony, small patio, entrance area or unused
+      corner can provide enough space for a few plants and
+      somewhere comfortable to sit.
+    </p>
+
+    <p>
+      Before adding anything, take a moment to look at how
+      the space is used throughout the day. Notice where
+      there is natural light, which areas are easiest to
+      reach and where you could comfortably spend time.
+    </p>
+
+
+    <h2>
+      Choose a Simple Planting Style
+    </h2>
+
+    <p>
+      A small collection of plants can often feel more
+      inviting when there is some consistency between them.
+      You might choose several plants with similar tones,
+      use matching containers or create a simple arrangement
+      around one larger plant.
+    </p>
+
+    <p>
+      The aim is not to fill every available surface.
+      Leaving some open space can make a compact outdoor
+      area feel calmer and easier to use.
+    </p>
+
+
+    <div class="article-note">
+      <p>
+        <strong>Keep it simple:</strong> Start with a few
+        plants that suit the conditions of your space.
+        You can always add more once you understand what
+        works well there.
+      </p>
+    </div>
+
+
+    <h2>
+      Add Somewhere Comfortable to Sit
+    </h2>
+
+    <p>
+      A garden space becomes much more useful when it gives
+      you a reason to stay for a while. Even a small chair
+      or compact bench can turn an unused corner into a
+      place for reading, having a drink or simply enjoying
+      some fresh air.
+    </p>
+
+    <p>
+      If space is limited, choose furniture that can be
+      moved or folded when the area needs to be used for
+      something else. Keeping the layout flexible can make
+      a small outdoor space feel less crowded.
+    </p>
+
+
+    <!-- CPA CTA -->
+    <div class="resource-card">
+
+      <div class="small-label">
+        Outdoor Inspiration
+      </div>
+
+      <h2>
+        Find Ideas for Your Outdoor Space
+      </h2>
+
+      <p>
+        Browse more outdoor inspiration and useful resources
+        for discovering ideas that can help you make the
+        most of the space around your home.
+      </p>
+
+      <a
+        href="nature-offer.html"
+        class="resource-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Discover Outdoor Ideas →
+      </a>
+
+      <p class="resource-disclosure">
+        This page may contain links to external services or
+        promotional offers. Availability and terms may vary.
+      </p>
+
+    </div>
+
+
+    <h2>
+      Think About Height and Layers
+    </h2>
+
+    <p>
+      When floor space is limited, using different heights
+      can make a garden feel more varied without taking up
+      much additional room.
+    </p>
+
+    <ul>
+      <li>Use shelves or stands for smaller plants.</li>
+      <li>Place taller greenery toward the back of an arrangement.</li>
+      <li>Use hanging containers where appropriate.</li>
+      <li>Keep frequently used areas clear and accessible.</li>
+    </ul>
+
+    <p>
+      Varying the height of plants and containers can also
+      help create a sense of depth in a compact space.
+    </p>
+
+
+    <h2>
+      Add a Few Personal Details
+    </h2>
+
+    <p>
+      Plants do most of the visual work, but a few simple
+      details can make the space feel more personal. A small
+      outdoor table, a textured cushion, a lantern or a
+      favourite decorative object can add character without
+      overwhelming the garden.
+    </p>
+
+    <p>
+      Try to choose details that are useful as well as
+      attractive. The best small outdoor spaces are usually
+      those that encourage you to spend more time using them.
+    </p>
+
+
+    <h2>
+      Keep Maintenance Manageable
+    </h2>
+
+    <p>
+      A beautiful outdoor space is easier to enjoy when it
+      does not feel like another demanding responsibility.
+      Choose plants and arrangements that fit the amount of
+      time you realistically want to spend caring for them.
+    </p>
+
+    <p>
+      Keep watering, cleaning and rearranging simple enough
+      to become part of your normal routine. A smaller,
+      well-maintained collection can be more enjoyable than
+      a crowded space that constantly needs attention.
+    </p>
+
+
+    <h2>
+      Let the Space Change Over Time
+    </h2>
+
+    <p>
+      A small garden does not need to be finished all at once.
+      Plants grow, seasons change and your own preferences may
+      develop as you spend more time outside.
+    </p>
+
+    <p>
+      Start with the basics, see how the space feels and make
+      small changes when something no longer works. Over time,
+      even a modest outdoor corner can become a comfortable
+      part of everyday life.
+    </p>
+
+  </article>
+
+</main>
+
+
+<!-- Shared Footer Script -->
+<script src="footer.js" defer></script>
+
+</body>
+</html>

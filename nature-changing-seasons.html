@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+
+<title>Noticing the Small Changes Each Season Brings — Lumina Haven</title>
+<meta name="description" content="Simple ways to notice seasonal changes in nature and appreciate the small details that make familiar places feel different throughout the year.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --page:#fafbf8;
+  --surface:#ffffff;
+  --ink:#20231e;
+  --subtle:#62685e;
+  --accent:#536b4b;
+  --line:#dfe4dc;
+  --soft:#f0f3ed;
+  --max:900px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  background:var(--page);
+  color:var(--ink);
+  font-family:'Inter',Arial,sans-serif;
+  line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none;}
+
+.article-hero{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:70px 24px 45px;
+  text-align:center;
+}
+
+.article-category{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:6px 15px;
+  background:#eef2eb;
+  border:1px solid #d5ddd0;
+  border-radius:4px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.article-hero h1{
+  max-width:760px;
+  margin:0 auto 18px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:clamp(40px,6vw,58px);
+  line-height:1.08;
+  font-weight:600;
+}
+
+.article-hero .intro{
+  max-width:670px;
+  margin:0 auto;
+  color:var(--subtle);
+  font-size:15px;
+  font-weight:300;
+  line-height:1.8;
+}
+
+.article-meta{
+  margin-top:22px;
+  color:#858c81;
+  font-size:11px;
+}
+
+.article-wrapper{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.article-content{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:45px 52px;
+}
+
+.back-link{
+  display:inline-block;
+  margin-bottom:28px;
+  color:var(--subtle);
+  font-size:13px;
+  font-weight:500;
+  transition:color .2s ease;
+}
+
+.back-link:hover{color:var(--accent);}
+
+.article-content h2{
+  margin:34px 0 12px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  line-height:1.25;
+  font-weight:600;
+}
+
+.article-content h2:first-child{margin-top:0;}
+
+.article-content h3{
+  margin:27px 0 9px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:23px;
+  font-weight:600;
+}
+
+.article-content p{
+  margin:0 0 17px;
+  color:#50564d;
+  font-size:14px;
+  line-height:1.85;
+  font-weight:300;
+}
+
+.article-content ul{
+  margin:10px 0 22px;
+  padding-left:22px;
+}
+
+.article-content li{
+  margin-bottom:9px;
+  color:#50564d;
+  font-size:14px;
+  font-weight:300;
+}
+
+.article-note{
+  margin:28px 0;
+  padding:20px 22px;
+  background:#f3f5f0;
+  border-left:3px solid var(--accent);
+  border-radius:4px;
+}
+
+.article-note p{margin:0;}
+
+.resource-card{
+  margin-top:42px;
+  padding:36px 30px;
+  text-align:center;
+  background:linear-gradient(135deg,#f0f3ed,#e7ede3);
+  border:1px solid #d4ddcf;
+  border-radius:12px;
+}
+
+.resource-card .small-label{
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+
+.resource-card h2{
+  margin:0 0 11px;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+}
+
+.resource-card p{
+  max-width:570px;
+  margin:0 auto 22px;
+  color:var(--subtle);
+  font-size:13px;
+  line-height:1.7;
+  font-weight:300;
+}
+
+.resource-btn{
+  display:inline-block;
+  padding:13px 27px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:600;
+  transition:transform .2s ease,background .2s ease;
+}
+
+.resource-btn:hover{
+  background:#40563a;
+  transform:translateY(-2px);
+}
+
+.resource-disclosure{
+  margin-top:13px !important;
+  color:#858c81 !important;
+  font-size:10px !important;
+}
+
+.site-footer{
+  width:100%;
+  border-top:1px solid var(--line);
+  background:#f7f5f0;
+  padding:50px 24px;
+  text-align:center;
+  color:var(--subtle);
+  font-size:13px;
+  margin-top:80px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:18px;
+  font-weight:500;
+}
+
+.footer-links a{
+  color:var(--subtle);
+  transition:color .2s ease;
+}
+
+.footer-links a:hover{color:var(--accent);}
+
+.disclaimer{
+  max-width:740px;
+  margin:16px auto 0;
+  font-size:11.5px;
+  color:#88857c;
+  line-height:1.6;
+  font-weight:300;
+}
+
+@media(max-width:650px){
+  .article-hero{padding:48px 18px 32px;}
+  .article-hero h1{font-size:40px;}
+  .article-hero .intro{font-size:13.5px;}
+  .article-wrapper{padding:0 15px 55px;}
+  .article-content{padding:30px 21px;}
+  .article-content h2{font-size:27px;}
+  .article-content p,
+  .article-content li{font-size:13.5px;}
+  .resource-card{padding:30px 20px;}
+  .site-footer{padding:42px 18px;}
+  .footer-links{gap:14px 20px;}
+}
+</style>
+</head>
+
+<body>
+
+<script src="header.js" defer></script>
+
+<section class="article-hero">
+  <span class="article-category">Seasons</span>
+
+  <h1>Noticing the Small Changes Each Season Brings</h1>
+
+  <p class="intro">
+    The natural world is always changing, even in familiar places.
+    Paying attention to small seasonal details can make everyday
+    walks and outdoor moments feel fresh throughout the year.
+  </p>
+
+  <div class="article-meta">4 min read · Nature Journal</div>
+</section>
+
+<main class="article-wrapper">
+  <article class="article-content">
+
+    <a href="nature.html" class="back-link">← Back to Nature Journal</a>
+
+    <h2>Look More Closely at Familiar Places</h2>
+
+    <p>
+      Seasonal change does not always arrive with an obvious
+      transformation. Sometimes it appears gradually in the
+      colour of leaves, the amount of daylight or the way a
+      familiar path looks at a different time of year.
+    </p>
+
+    <p>
+      Visiting the same park, garden or walking route regularly
+      gives you an opportunity to notice these smaller changes.
+      A place that feels completely familiar can still look
+      different from one month to the next.
+    </p>
+
+    <h2>Notice the Light</h2>
+
+    <p>
+      Light can change the character of an outdoor space more
+      than you might expect. Longer evenings can make familiar
+      places feel open and bright, while shorter days create
+      softer and quieter moments.
+    </p>
+
+    <p>
+      Try spending a little time outside at different points
+      throughout the year. You may start noticing how the same
+      trees, buildings and paths change with the season.
+    </p>
+
+    <div class="article-note">
+      <p>
+        <strong>A simple habit:</strong> Choose one familiar
+        outdoor place and visit it occasionally throughout the
+        year. Notice one thing that looks different each time.
+      </p>
+    </div>
+
+    <h2>Pay Attention to Plants</h2>
+
+    <p>
+      Plants provide some of the clearest reminders that the
+      seasons are moving forward. New growth, flowers, changing
+      leaves and bare branches all create different visual
+      details in the same landscape.
+    </p>
+
+    <p>
+      You do not need to know the name of every plant to enjoy
+      these changes. Simply noticing what is growing, changing
+      or disappearing can make an ordinary walk more engaging.
+    </p>
+
+    <div class="resource-card">
+      <div class="small-label">Nature Inspiration</div>
+
+      <h2>Discover More Ways to Enjoy the Outdoors</h2>
+
+      <p>
+        Explore more outdoor ideas, seasonal inspiration and
+        resources for making everyday time in nature a little
+        more enjoyable.
+      </p>
+
+      <a href="nature-offer.html" class="resource-btn" target="_blank" rel="noopener noreferrer">
+        Explore Nature Ideas →
+      </a>
+
+      <p class="resource-disclosure">
+        This page may contain links to external services or
+        promotional offers. Availability and terms may vary.
+      </p>
+    </div>
+
+    <h2>Notice the Sounds Around You</h2>
+
+    <p>
+      Seasonal differences can also be heard rather than seen.
+      The sound of wind through trees, rainfall, birds and busy
+      or quiet outdoor spaces can change the feeling of a place.
+    </p>
+
+    <p>
+      Occasionally putting your phone away and simply listening
+      can make an otherwise familiar outdoor moment feel more
+      noticeable.
+    </p>
+
+    <h2>Let Each Season Offer Something Different</h2>
+
+    <ul>
+      <li>Spring can encourage you to look for new growth.</li>
+      <li>Summer creates more opportunities for longer outdoor moments.</li>
+      <li>Autumn brings changing colours and cooler air.</li>
+      <li>Winter can make familiar landscapes feel quieter and simpler.</li>
+    </ul>
+
+    <p>
+      There is no need to decide that one season is better than
+      another. Each one provides different reasons to step
+      outside and pay attention.
+    </p>
+
+    <h2>Make Observation Part of Everyday Life</h2>
+
+    <p>
+      Noticing seasonal changes does not require special equipment
+      or a dedicated hobby. A short walk, time in a garden or a
+      few minutes outside can be enough.
+    </p>
+
+    <p>
+      The more often you pause to notice what has changed, the
+      easier it becomes to appreciate the small details that
+      make outdoor spaces feel alive throughout the year.
+    </p>
+
+  </article>
+</main>
+
+<script src="footer.js" defer></script>
+
+</body>
+</html>

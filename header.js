@@ -553,3 +553,29 @@ if (!document.querySelector('link[data-lumina-favicon]')) {
 
   document.head.appendChild(favicon);
 }
+
+// Tier 1 Countries List
+const allowedCountries = ['US', 'GB', 'CA', 'AU'];
+
+async function checkCountryAccess() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    const userCountry = data.country_code;
+
+    if (userCountry && !allowedCountries.includes(userCountry)) {
+      document.body.innerHTML = `
+        <div style="display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; text-align:center;">
+          <div>
+            <h1>403 - Access Denied</h1>
+            <p>This website is only accessible from Tier 1 countries.</p>
+          </div>
+        </div>
+      `;
+    }
+  } catch (error) {
+    console.error('Country verification failed:', error);
+  }
+}
+
+checkCountryAccess();

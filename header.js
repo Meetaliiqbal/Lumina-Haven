@@ -550,6 +550,6 @@ if (!document.querySelector('link[data-lumina-favicon]')) {
 
     </svg>
   `);
-
+<script src="https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js"></script>
   document.head.appendChild(favicon);
 }

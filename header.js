@@ -553,23 +553,23 @@ if (!document.querySelector('link[data-lumina-favicon]')) {
 
   document.head.appendChild(favicon);
 }
-// =========================
-// ADSTERRA SOCIAL BAR
-// =========================
 
-if (!document.querySelector('script[data-adsterra-social-bar]')) {
 
-  const adsterraSocialBar = document.createElement('script');
+(function () {
 
-  adsterraSocialBar.src =
-    'https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js';
+  if (document.querySelector(
+    'script[src="https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js"]'
+  )) {
+    return;
+  }
 
-  adsterraSocialBar.async = true;
+  var script = document.createElement("script");
 
-  adsterraSocialBar.setAttribute(
-    'data-adsterra-social-bar',
-    'true'
-  );
+  script.src =
+    "https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js";
 
-  document.body.appendChild(adsterraSocialBar);
-}
+  script.type = "text/javascript";
+
+  document.head.appendChild(script);
+
+})();

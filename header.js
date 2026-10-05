@@ -515,6 +515,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+/* =========================
+     ADSTERRA SOCIAL BAR
+  ========================= */
+
+  if (!document.querySelector('script[data-adsterra-social-bar]')) {
+
+    const adsterraSocialBar = document.createElement("script");
+
+    adsterraSocialBar.src =
+    'https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js';
+
+    adsterraSocialBar.setAttribute(
+      "data-adsterra-social-bar",
+      "true"
+    );
+
+    document.body.appendChild(adsterraSocialBar);
+
+  }
+
+});
 // =========================
 // LUMINA HAVEN FAVICON
 // =========================
@@ -553,24 +574,3 @@ if (!document.querySelector('link[data-lumina-favicon]')) {
 
   document.head.appendChild(favicon);
 }
-/* =========================
-     ADSTERRA SOCIAL BAR
-  ========================= */
-
-  if (!document.querySelector('script[data-adsterra-social-bar]')) {
-
-    const adsterraSocialBar = document.createElement("script");
-
-    adsterraSocialBar.src =
-    'https://pl31596497.profitableratecpmnetwork.com/46/28/97/46289769c5a58be2d54bf332fd1088a0.js';
-
-    adsterraSocialBar.setAttribute(
-      "data-adsterra-social-bar",
-      "true"
-    );
-
-    document.body.appendChild(adsterraSocialBar);
-
-  }
-
-});
